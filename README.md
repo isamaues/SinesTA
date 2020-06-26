@@ -4,8 +4,9 @@
 Original version's repository:
 https://github.com/tensorflow/models/tree/master/research/audioset/yamnet
 
-Files removed:
-Those files are not used on the application
+# Files removed:
+
+Those files are not used on the application.
 - README.md
 - inference.py
 - yamnet_vizualization.ipynb
