@@ -14,15 +14,19 @@ Those files are not used on the application
 
 All those files can still be found on the original repository as mentioned above.
 
-Files added:
+# Files added:
 - inference5.py:
+
   Changes were made to the original inference.py example file due to dependency problems. Could not install scipy using pip or pip3 because of a compatibility problem with PEP517 that did not allow me to build scipy's wheel. Resampy was then removed because it's only purpose was converting the argument to mono and the sample rate expected by YAMNet which can be set for recording.
 
-- features_tflite.py
+- features_tflite.py:
+
   As exlplained on https://medium.com/@antonyharfield/converting-the-yamnet-audio-detection-model-for-tensorflow-lite-inference-43d049bd357c
 
-- yamnet.tflite
+- yamnet.tflite:
+
   For compiling the a Lite the YAMNet model on raspberry pi.
-  
+
+# Installation
 Check the installation_guide for a step by step guide to installing and running the application.
 
