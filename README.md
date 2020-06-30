@@ -18,7 +18,7 @@ All those files can still be found on the original repository as mentioned above
 # Files added:
 - inference5.py:
 
-  Changes were made to the original inference.py example file due to dependency problems. Could not install scipy using pip or pip3 because of a compatibility problem with PEP517 that did not allow me to build scipy's wheel. Resampy was then removed because it's only purpose was converting the argument to mono and the sample rate expected by YAMNet which can be set for recording.
+  Changes were made to the original inference.py example file due to dependency problems. Could not install scipy using pip or pip3 because of a compatibility problem with PEP517 that did not allow me to build scipy's wheel. Resampy was then removed because it's not supported on linux armv7l architecture using conda as well and it's only purpose was converting the argument to mono and the sample rate expected by YAMNet which can be set for recording.
 
 - features_tflite.py:
 
