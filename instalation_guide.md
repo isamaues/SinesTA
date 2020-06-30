@@ -17,6 +17,9 @@ This step is a bit tricky since it does not run out of the box because both Tens
 ### 1 
 First you can simply follow the Python Quickstart tutorial made by Tensorflow (link below) that will install just the Tensorflow Lite Interpreter that is what we need to run the yamnet.tflite file that represents the converted lite model of YAMNet, which is now optimized for embeded systems as the one being used.
 
+Make sure you download the corresponding python version to your system.
+
 https://www.tensorflow.org/lite/guide/python
 
 ### 2
+On inference5.py source code the yamnet.py is still used to get the class names (apparently just reads the csv)
