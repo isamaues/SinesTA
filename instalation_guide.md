@@ -11,7 +11,15 @@ To upgrade your setuptools you can simply use:
 
 ## Step 1: Clone this Repository
 ```git clone https://github.com/isamaues/tflite_model_audioset_yamnet_modified```
-## Step 2: Preparing Tensorflow
+## Step 2: Installing small packages
+Since tensorflow takes some time to download, let's begin with smaller packages that are also easier to debug.
+- Numpy
+
+  ```pip3 install numpy```
+- SoundFile
+
+  ```pip install soundfile```
+## Step 3: Preparing Tensorflow
 This step is a bit tricky since it does not run out of the box because both Tensorflow lite and Tensorflow 2.0 are used in this application. There is also a tensorflow version limitation when installing it via pip (only up to 1.14 which will throw some minor errors because of package dependencies).
 
 ### 1 
