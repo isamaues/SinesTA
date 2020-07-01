@@ -8,6 +8,10 @@ This is a tutorial for installing and running this application on a Raspberry Pi
 To upgrade your setuptools you can simply use:
 
   ```pip install --upgrade setuptools```
+  
+  and/or:
+  
+  ```pip3 install --upgrade setuptools```
 
 - You do not need much more then apt, pip or conda installers, keep it simple to avoid version issues and package conflicts.
 - Be patient, some packages take forever to build, but as long as it does not outputs an error, it is ok. :)
