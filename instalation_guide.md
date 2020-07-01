@@ -99,6 +99,13 @@ Make sure you are back to root:
 having alsa and pcm issues
 ### Step 2: Record an Audio
 having alsa and pcm issues
+https://github.com/snipsco/snips-issues/issues/148
+
+port audio no longer works with kernel version >= 4.19.37
+
+uname -r (this command shows the kernel version)
+4.19.118-v7+
+
 #### 1. Get back to the the application directory
 
 ```cd tflite_model_audioset_yamnet_modified```
