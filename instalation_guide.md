@@ -31,14 +31,18 @@ You can simply follow the Python Quickstart tutorial made by Tensorflow (link be
 
 Make sure you download the corresponding python version to your system.
 
-https://www.tensorflow.org/lite/guide/python
+```https://www.tensorflow.org/lite/guide/python#install_just_the_tensorflow_lite_interpreter```
+
+No need to follow the following instructions about running an inference using tflite_runtime, those changes were already made and it is all set. 
 
 ### Option 2 (Advanced)
 Tensorflow 2.0 implementation was not released on this version of the application but there are some tips that i can share about doing it all manually, since i have tried it myself before.
 
 If you want it to run on Tensorflow 2.0, keep in mind that it is slower and requires more computational resources. There is also a Tensorflow version limitation when installing it via pip (only up to 1.14 which will throw some minor errors because of package dependencies). To solve that issue you can try to find an unofficial wheel for the 2.0 built by the community, it did work for tests. It is worth to mention that it took arround 1h20min for it to run, but it can vary, so be patient.
 
-You will also need keras and change a few code lines to use Tensorflow 2.0 interpreter. If requested, a Tensorflow 2.0 compatible version can be released later.
+You will also need keras and change a few code lines to use Tensorflow 2.0 Interpreter. To use the correct interpreter, you need undo the changes done to the original code, as explained on the previous link. 
+
+If requested, a Tensorflow 2.0 compatible version can be released later.
 
 ## Step 4: Running a Test Audio File
 
