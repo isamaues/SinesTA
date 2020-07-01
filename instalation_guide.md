@@ -28,7 +28,7 @@ Since tensorflow takes some time to download, let's begin with smaller packages 
   
 - SoundFile
 
-  ```pip install soundfile```
+  ```pip3 install soundfile```
   
 ### Step 3: Preparing Tensorflow
 
