@@ -88,22 +88,13 @@ Not ready for usage.
 
 ### Step 1: Install PyAudio
 
-#### 1. Before installing you need to know that PyAudio requires:
-
-- portaudio19-dev
-
-http://www.portaudio.com/download.html
-
-- python-all-dev
-
-  ???
-
-#### 2. After Downloading the packages above you can proceed with pyaudio installation using:
+Atention: make sure you are back to root directory.
 
 ```pip3 install pyaudio```
+
 ### Step 2: Recording
 
-#### 1. Change to the the cloned repository directory:
+#### 1. Change back to the the cloned repository directory:
   
   ```cd tflite_model_audioset_yamnet_modified```
   
