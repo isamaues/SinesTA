@@ -2,6 +2,7 @@
   Slightly modified version of the yamnet and tensorflow implementations used on a audio recognition research project with academic purpose. The project is still on development and tests stages so none of it has been published or presented yet.
 
 Original version's repository:
+
 https://github.com/tensorflow/models/tree/master/research/audioset/yamnet
 
 ## Files removed:
@@ -23,12 +24,14 @@ All those files can still be found on the original repository as mentioned above
 
 - features_tflite.py:
 
-  A modified version of features.py (original code). As exlplained on https://medium.com/@antonyharfield/converting-the-yamnet-audio-detection-model-for-tensorflow-lite-inference-43d049bd357c
+  A modified version of features.py (original code). As exlplained on:
+  
+  https://medium.com/@antonyharfield/converting-the-yamnet-audio-detection-model-for-tensorflow-lite-inference-43d049bd357c
 
 - yamnet.tflite:
 
   For compiling the a Lite the YAMNet model on raspberry pi.
 
 # Installation
-Check the installation_guide for a step by step guide to installing and running the application.
+Check the installation_guide file for a step by step guide to installing and running the application.
 
