@@ -1,24 +1,29 @@
 # Installation Guide
 This is a tutorial for installing and running this application on a Raspberry Pi 3 B using Raspberry Pi OS (32-bit) with desktop (gcc 8.3.0).
-## Some Tips Before we start
+## Some Tips Before We Start
 - Some of the following packages only work with python 3.6 or greater.
 - Make sure you have your pip, pip3 and stuptools up to date, specially while using python 3.6.
 To upgrade your setuptools you can simply use:
 
   ```pip install --upgrade setuptools```
+
 - You do not need much more then apt, pip or conda installers, keep it simple to avoid version issues and package conflicts.
 - Be patient, some packages take forever to build, but as long as it does not outputs an error, it is ok. :)
 
-## Step 1: Clone this Repository
+## Step 1: Clone This Repository
+
 ```git clone https://github.com/isamaues/tflite_model_audioset_yamnet_modified```
-## Step 2: Installing small packages
+
+## Step 2: Installing Smaller Required Packages
 Since tensorflow takes some time to download, let's begin with smaller packages that are also easier to debug.
 - Numpy
 
   ```pip3 install numpy```
+  
 - SoundFile
 
   ```pip install soundfile```
+  
 ## Step 3: Preparing Tensorflow
 
 ### Option 1 (Recommended) 
@@ -34,4 +39,34 @@ Tensorflow 2.0 implementation was not released on this version of the applicatio
 If you want it to run on Tensorflow 2.0, keep in mind that it is slower and requires more computational resources. There is also a Tensorflow version limitation when installing it via pip (only up to 1.14 which will throw some minor errors because of package dependencies). To solve that issue you can try to find an unofficial wheel for the 2.0 built by the community, it did work for tests. It is worth to mention that it took arround 1h20min for it to run, but it can vary, so be patient.
 
 You will also need keras and change a few code lines to use Tensorflow 2.0 interpreter. If requested, a Tensorflow 2.0 compatible version can be released later.
+
+## Step 4: Running a Test Audio File
+
+### 1. Change to the the cloned repository directory:
+  
+  ```cd tflite_model_audioset_yamnet_modified```
+  
+### 2. Run the modified inference script (inference6.py)
+ - Option 1
+
+  ```python inference6.py DogWavMono0975secs1600hz15600samples.wav```
+  
+ - Option 2 (Recommended)
+  
+  Since Raspberry Pi OS usually has Python 2.7 as default for the python alias, you can try using the following command instead that has Python 3.7 as default.
+
+  ```python3 inference6.py DogWavMono0975secs1600hz15600samples.wav```
+
+The expected output should be something like:
+  ```
+  DogWavMono0975secs1600hz15600samples.wav :
+  Animal      : 0.987
+  Domestic animals, pets: 0.933
+  Dog         : 0.912
+  Canidae, dogs, wolves: 0.407
+  Bark        : 0.271
+  Enviando pattern A para o ESP32
+
+  ```
+  
 
