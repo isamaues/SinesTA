@@ -53,13 +53,13 @@ If requested, a Tensorflow 2.0 compatible version can be released later.
 ### Step 4: Running a Test Audio File
 The file used is from a barking dog and was named DogWavMono0975secs1600hz15600samples.wav. The name, for now, seems unecessarily long but it is a reminder of the strict values of params that it needs to follow. The original source code was more dynamic but the used package (Resampy) could not be installed. To change those params, you have to keep in mind the mathematic nature of fourier transformations and make sure that the values correspond to eachother. 
 
-You can play it out of curiosity by using:
-
-```aplay DogWavMono0975secs1600hz15600samples.wav```
-
 #### 1. Change to the the cloned repository directory:
   
   ```cd tflite_model_audioset_yamnet_modified```
+  
+Now that we moved to the application directory, you can also play the audio example by using:
+
+```aplay DogWavMono0975secs1600hz15600samples.wav```
   
 #### 2. Run the modified inference script (inference6.py) on the given audio example:
  - Option 1
