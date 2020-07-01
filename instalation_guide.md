@@ -20,14 +20,18 @@ Since tensorflow takes some time to download, let's begin with smaller packages 
 
   ```pip install soundfile```
 ## Step 3: Preparing Tensorflow
-This step is a bit tricky since it does not run out of the box because both Tensorflow lite and Tensorflow 2.0 are used in this application. There is also a tensorflow version limitation when installing it via pip (only up to 1.14 which will throw some minor errors because of package dependencies).
 
-### 1 
-First you can simply follow the Python Quickstart tutorial made by Tensorflow (link below) that will install just the Tensorflow Lite Interpreter that is what we need to run the yamnet.tflite file that represents the converted lite model of YAMNet, which is now optimized for embeded systems as the one being used.
+### Option 1 (Recommended) 
+You can simply follow the Python Quickstart tutorial made by Tensorflow (link below) that will install just the Tensorflow Lite Interpreter that is what we need to run the yamnet.tflite file that represents the converted lite model of YAMNet, which is now optimized for embeded systems as the one being used.
 
 Make sure you download the corresponding python version to your system.
 
 https://www.tensorflow.org/lite/guide/python
 
-### 2
-On inference5.py source code the yamnet.py is still used to get the class names (apparently just reads the csv)
+### Option 2 (Advanced)
+Tensorflow 2.0 implementation was not released on this version of the application but there are some tips that i can share about doing it all manually, since i have tried it myself before.
+
+If you want it to run on Tensorflow 2.0, keep in mind that it is slower and requires more computational resources. There is also a Tensorflow version limitation when installing it via pip (only up to 1.14 which will throw some minor errors because of package dependencies). To solve that issue you can try to find an unofficial wheel for the 2.0 built by the community, it did work for tests. It is worth to mention that it took arround 1h20min for it to run, but it can vary, so be patient.
+
+You will also need keras and change a few code lines to use Tensorflow 2.0 interpreter. If requested, a Tensorflow 2.0 compatible version can be released later.
+
