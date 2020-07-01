@@ -86,21 +86,22 @@ The expected output should be something like:
 ## Audio Recording (Ongoing)
 Not ready for usage.
 
-### Step 1: Install PyAudio
+Make sure you are back to root:
+```cd```
 
-Atention: make sure you are back to root directory.
 
+#### 1. Before installing you need to know that PyAudio requires:
+
+- portaudio19-dev
+
+http://www.portaudio.com/download.html
+
+- python-all-dev
+
+  ???
+  
+#### 2. After Downloading the packages above you can proceed with pyaudio installation using:
 ```pip3 install pyaudio```
-
-### Step 2: Recording
-
-#### 1. Change back to the the cloned repository directory:
-  
-  ```cd tflite_model_audioset_yamnet_modified```
-  
-#### 2. Run the record0975secs.py file using:
-
-```python3 record0975secs.py```
 
 Warning: If you run this command again it will write over the same file instead of making a new one.
 
