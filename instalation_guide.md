@@ -89,21 +89,23 @@ Not ready for usage.
 Make sure you are back to root:
 ```cd```
 
+### Step 1: Preset
 
-#### 1. Before installing you need to know that PyAudio requires:
+#### 1. Install PyAudio
 
-- portaudio19-dev
+```sudo apt-get install python-pyaudio python3-pyaudio```
 
-Follow the instructions on the link below:
+#### 2. Set the hardware ports and input devices
+having alsa and pcm issues
+### Step 2: Record an Audio
+having alsa and pcm issues
+#### 1. Get back to the the application directory
 
-https://app.assembla.com/spaces/portaudio/wiki/Platforms_RaspberryPi
+```cd tflite_model_audioset_yamnet_modified```
 
-- python-all-dev
+#### 2. Run the recording script
 
-  ???
-  
-#### 2. After Downloading the packages above you can proceed with pyaudio installation using:
-```pip3 install pyaudio```
+```python3 record0975secs.py```
 
 Warning: If you run this command again it will write over the same file instead of making a new one.
 
