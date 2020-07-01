@@ -94,7 +94,9 @@ Make sure you are back to root:
 
 - portaudio19-dev
 
-http://www.portaudio.com/download.html
+Follow the instructions on the link below:
+
+https://app.assembla.com/spaces/portaudio/wiki/Platforms_RaspberryPi
 
 - python-all-dev
 
