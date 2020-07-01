@@ -11,6 +11,7 @@ Those files are not used on the application.
 - inference.py
 - yamnet_vizualization.ipynb
 - yamnet_test.py
+- features.py
 
 
 All those files can still be found on the original repository as mentioned above.
@@ -22,7 +23,7 @@ All those files can still be found on the original repository as mentioned above
 
 - features_tflite.py:
 
-  As exlplained on https://medium.com/@antonyharfield/converting-the-yamnet-audio-detection-model-for-tensorflow-lite-inference-43d049bd357c
+  A modified version of features.py (original code). As exlplained on https://medium.com/@antonyharfield/converting-the-yamnet-audio-detection-model-for-tensorflow-lite-inference-43d049bd357c
 
 - yamnet.tflite:
 
