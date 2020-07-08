@@ -87,9 +87,19 @@ The expected output should be something like:
 Not ready for usage.
 
 Make sure you are back to root:
+
 ```cd```
 
 ### Step 1: Preset
+Py audio requires installing those 2 libraries first:
+
+- portaudio19-dev:
+
+```sudo apt-get install portaudio19-dev```
+
+- python-all-dev:
+
+```sudo apt-get install python-all-dev```
 
 #### 1. Install PyAudio
 
@@ -115,6 +125,14 @@ uname -r (this command shows the kernel version)
 ```python3 record0975secs.py```
 
 Warning: If you run this command again it will write over the same file instead of making a new one.
+
+It may not run out of the box because you need to specify the input device index. To list the devices you can simply use:
+ 
+ ```arecord -l```
+ 
+ if the device index is different of 0, you can change the usb port of your device to 0 (unplug and then plug the device on the corresponding port) or change the file record0975secs.py dev_index variable from 0 to the desired usb port number.
+
+Running this script will record the audio properly even with all those errors shown on the screen.
 
 ### Step 3: Run the modified inference script (inference6.py) on the captured audio:
 
