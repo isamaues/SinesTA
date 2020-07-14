@@ -51,7 +51,60 @@ You will also need keras and change a few code lines to use Tensorflow 2.0 Inter
 If requested, a Tensorflow 2.0 compatible version can be released later.
 
 ### Step 4: Getting Resampy to work
-That is a confusing task that was supposed to be simple.
+That is a confusing task that was supposed to be simple. If you go to the Resampy repository, they will tell you to simply install it via pip and you can try it for yourself now.
+
+```pip3 install resampy```
+
+If it does work for you, jump to the next step, if it does not you will need to follow the instructions below.
+
+The problem is probably because pip can not build wheels for the most recent version of scipy, can't find the path for a llvm file so it won't build llvmlite as well and needs to update numba's colorama package. If it's asked, you may need to do all of those manually in order for it to work.
+
+- Install scipy and llvmlite separatedly and then proceed to install resampy
+
+#### Installing Scipy:
+Since pip is not work we can use apt instead. The problem with using apt is that they don't usually are up to date and usually contains older versions but that's the only oficial option for now, but you can always try those wheels built by the community as well. When i ran the following command i only got the scipy 1.1, but it still worked fine with resampy.
+
+```sudo apt update```
+```sudo apt install -y python3-scipy```
+
+#### Installing llvmlite:
+
+You can also try to download it via pip
+
+```pip3 install llvmlite```
+
+The problem is that llvmlite does not find the path to llvm-config and you need to point that.
+
+There are 2 scenarios.
+
+- 1. You already have correct version of llvm installed and you just need to point the path for llvm-config file
+
+To know which version you need of llvm, just check their PyPI page on:
+
+https://pypi.org/project/llvmlite/
+
+if that is your case, jump to step N of Installing llvmlite.
+
+- 2. You have an older version or do not even have any instance of llvm on your device.
+
+To know your version  or if you have llvm installed try:
+
+```llvm --version```
+
+if nothing is shown, you do not have it installed.
+
+If that is you case, follow all the instructions above.
+
+##### Step 1:
+
+This step is the most complicated, and i'll also link the oficiall website so you can try both options.
+
+http://llvmlite.pydata.org/en/latest/admin-guide/install.html
+``````
+
+https://apt.llvm.org/
+
+deb http://apt.llvm.org/buster/ llvm-toolchain-buster-9 main
 
 ### Step 5: Running a Test Audio File
 The file used is from a barking dog and was named DogWavMono0975secs1600hz15600samples.wav. The name, for now, seems unecessarily long but it is a reminder of the strict values of params that it needs to follow. The original source code was more dynamic but the used library for generating the spectograms could not be used. To change those params, you have to keep in mind the mathematic nature of fourier transformations and make sure that the values correspond to eachother. 
@@ -64,7 +117,7 @@ Now that we moved to the application directory, you can also play the audio exam
 
 ```aplay DogWavMono0975secs1600hz15600samples.wav```
   
-#### 2. Run the modified inference script (inference6.py) on the given audio example:
+#### 2. Run the modified inference script (inference8.py) on the given audio example:
  - Option 1
 
   ```python inference8.py DogWavMono0975secs1600hz15600samples.wav```
@@ -73,7 +126,7 @@ Now that we moved to the application directory, you can also play the audio exam
   
   Since Raspberry Pi OS usually has Python 2.7 as default for the python alias, you can try using the following command instead that has Python 3.7 as default.
 
-  ```python3 inference6.py DogWavMono0975secs1600hz15600samples.wav```
+  ```python3 inference8.py DogWavMono0975secs1600hz15600samples.wav```
 
 The expected output should be something like:
   ```
