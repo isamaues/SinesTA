@@ -50,8 +50,11 @@ You will also need keras and change a few code lines to use Tensorflow 2.0 Inter
 
 If requested, a Tensorflow 2.0 compatible version can be released later.
 
-### Step 4: Running a Test Audio File
-The file used is from a barking dog and was named DogWavMono0975secs1600hz15600samples.wav. The name, for now, seems unecessarily long but it is a reminder of the strict values of params that it needs to follow. The original source code was more dynamic but the used package (Resampy) could not be installed. To change those params, you have to keep in mind the mathematic nature of fourier transformations and make sure that the values correspond to eachother. 
+### Step 4: Getting Resampy to work
+That is a confusing task that was supposed to be simple.
+
+### Step 5: Running a Test Audio File
+The file used is from a barking dog and was named DogWavMono0975secs1600hz15600samples.wav. The name, for now, seems unecessarily long but it is a reminder of the strict values of params that it needs to follow. The original source code was more dynamic but the used library for generating the spectograms could not be used. To change those params, you have to keep in mind the mathematic nature of fourier transformations and make sure that the values correspond to eachother. 
 
 #### 1. Change to the the cloned repository directory:
   
@@ -64,7 +67,7 @@ Now that we moved to the application directory, you can also play the audio exam
 #### 2. Run the modified inference script (inference6.py) on the given audio example:
  - Option 1
 
-  ```python inference6.py DogWavMono0975secs1600hz15600samples.wav```
+  ```python inference8.py DogWavMono0975secs1600hz15600samples.wav```
   
  - Option 2 (Recommended)
   
@@ -84,9 +87,8 @@ The expected output should be something like:
 
   ```
 ## Audio Recording (Ongoing)
-Not ready for usage.
 
-We will be using arecord
+We will be using arecord and aplay, the command-line sound recorder and player for ALSA soundcard driver.
 
 ### Step 1: Record an Audio
 
@@ -101,17 +103,25 @@ We will be using arecord
 
 Warning: If you run this command again it will write over the same file instead of making a new one. To create a different file from the previous one, give it a new name like test2.wav instead.
 
+- If it does not run right out of the box, please consider reading the comments bellow.
+
 Usually the avaiable format on sound cards is S16_LE, in my case it was the only one avaiable so that's the one being used, but arecord is compatible with other formats. What will make a difference is recording in a different sample rate, in that case we use it as -r 44100 because it's the only one avaiable on my microphone device. Some devices only record in 48000Hz or record in more than one sample rate. To make sure it's all set for the devices you have you can show the device information by using the following command.
 
-``` ```
+```olhar os comandos para mostrar o sample rate do dispositivo e os formatos disponíveis ```
 
-It may not run out of the box because you need to specify the input device index. To list the devices you can simply use:
+The -s command stands for the duration of the audio file. We are used to measure it in seconds but it's being measured in number of samples. The value also may change if you change  the -r value. Increase or decrease the -s value until it matches the required value for the inference script. Hopefully i'll come up with a way to deal with those variables values so you don't have to do so in the future.
+
+After doing all that, it may not run out of the box because you need to specify the input device index. To list the devices you can simply use:
  
 ```arecord -l```
  
  if the card and device indexes are different of the hw values above, you can change the usb port of your device until it works (unplug and then plug the device on the corresponding port) or change those values from 1,0 to the desired ones.
+ 
+### Step 2: Play the recorded audio:
 
-### Step 3: Run the modified inference script (inference6.py) on the captured audio:
+```aplay test.wav ```
+
+### Step 3: Run the modified inference script (inference8.py) on the captured audio:
 
 ```python3 inference8.py test.wav```
 
