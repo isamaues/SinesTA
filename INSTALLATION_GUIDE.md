@@ -86,55 +86,32 @@ The expected output should be something like:
 ## Audio Recording (Ongoing)
 Not ready for usage.
 
-Make sure you are back to root:
+We will be using arecord
 
-```cd```
+### Step 1: Record an Audio
 
-### Step 1: Preset
-Py audio requires installing those 2 libraries first:
-
-- portaudio19-dev:
-
-```sudo apt-get install portaudio19-dev```
-
-- python-all-dev:
-
-```sudo apt-get install python-all-dev```
-
-#### 1. Install PyAudio
-
-```sudo apt-get install python-pyaudio python3-pyaudio```
-
-#### 2. Set the hardware ports and input devices
-having alsa and pcm issues
-### Step 2: Record an Audio
-having alsa and pcm issues
-https://github.com/snipsco/snips-issues/issues/148
-
-port audio no longer works with kernel version >= 4.19.37
-
-uname -r (this command shows the kernel version)
-4.19.118-v7+
 
 #### 1. Get back to the the application directory
 
 ```cd tflite_model_audioset_yamnet_modified```
 
-#### 2. Run the recording script
+#### 2. Run the recording command
 
-```python3 record0975secs.py```
+```arecord --device=hw:1,0 -f S16_LE -r 44100 -s 43000 test.wav```
 
-Warning: If you run this command again it will write over the same file instead of making a new one.
+Warning: If you run this command again it will write over the same file instead of making a new one. To create a different file from the previous one, give it a new name like test2.wav instead.
+
+Usually the avaiable format on sound cards is S16_LE, in my case it was the only one avaiable so that's the one being used, but arecord is compatible with other formats. What will make a difference is recording in a different sample rate, in that case we use it as -r 44100 because it's the only one avaiable on my microphone device. Some devices only record in 48000Hz or record in more than one sample rate. To make sure it's all set for the devices you have you can show the device information by using the following command.
+
+``` ```
 
 It may not run out of the box because you need to specify the input device index. To list the devices you can simply use:
  
- ```arecord -l```
+```arecord -l```
  
- if the device index is different of 0, you can change the usb port of your device to 0 (unplug and then plug the device on the corresponding port) or change the file record0975secs.py dev_index variable from 0 to the desired usb port number.
-
-Running this script will record the audio properly even with all those errors shown on the screen.
+ if the card and device indexes are different of the hw values above, you can change the usb port of your device until it works (unplug and then plug the device on the corresponding port) or change those values from 1,0 to the desired ones.
 
 ### Step 3: Run the modified inference script (inference6.py) on the captured audio:
 
-```python3 inference6.py test.wav```
+```python3 inference8.py test.wav```
 
