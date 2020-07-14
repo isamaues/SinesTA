@@ -18,9 +18,9 @@ Those files are not used on the application.
 All those files can still be found on the original repository as mentioned above.
 
 ## Files added:
-- inference6.py:
+- inference8.py:
 
-  Changes were made to the original inference.py example file due to dependency problems. Could not install scipy using pip or pip3 because of a compatibility problem with PEP517 that did not allow me to build scipy's wheel. Resampy was then removed because it's not supported on linux armv7l architecture using conda as well and it's only purpose was converting the argument to mono and the sample rate expected by YAMNet which can be set for recording.
+  Changes were made to the original inference.py example file to be used with TFLite instead of the regular version of Tensorflow.
 
 - features_tflite.py:
 
@@ -33,5 +33,5 @@ All those files can still be found on the original repository as mentioned above
   For compiling the a Lite the YAMNet model on raspberry pi.
 
 # Installation
-Check the installation_guide file for a step by step guide to installing and running the application.
+Check the INSTALLATION_GUIDE file for a step by step guide to installing and running the application.
 
