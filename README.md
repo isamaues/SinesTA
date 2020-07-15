@@ -55,8 +55,13 @@ Check the INSTALLATION_GUIDE file for examples on running the application and a 
 
 - 2. Run one of the following examples:
 
-  - Uses a test file
+  - Uses a test file:
+  
   ```python3 example.py```
+  
+  Expected Output:
+  
 
   - Records the enviroment and makes an inference 5 times:
+  
   ```python3 example2.py```
