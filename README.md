@@ -33,15 +33,15 @@ All those files can still be found on the original repository as mentioned above
   For compiling the a Lite the YAMNet model on raspberry pi.
 
 # Installation
-Clone this repo and use the new installer.
+- 1. Clone this repo and use the new installer:
 
 ```git clone https://github.com/isamaues/tflite_model_audioset_yamnet_modified```
  
-Go to the project directory:
+- 2. Go to the project directory:
 
 ```cd tflite_model_audioset_yamnet_modified```
 
-Run the installer by using the following command:
+- 3. Run the installer by using the following command:
 
 ```bash installertest.sh```
 
