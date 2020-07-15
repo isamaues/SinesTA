@@ -3,8 +3,8 @@ echo "starting installation --------------------"
 cd
 apt-get update
 pip3 install --upgrade setuptools
-echo "cloning repository"
-git clone https://github.com/isamaues/tflite_model_audioset_yamnet_modified
+#echo "cloning repository"
+#git clone https://github.com/isamaues/tflite_model_audioset_yamnet_modified
 echo "installing prerequisite packages"
 pip3 install numpy
 echo "numpy ok"
