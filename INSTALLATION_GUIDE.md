@@ -39,6 +39,8 @@ Make sure you download the corresponding python version to your system.
 
 https://www.tensorflow.org/lite/guide/python#install_just_the_tensorflow_lite_interpreter
 
+```pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl```
+
 No need to follow the following instructions about running an inference using tflite_runtime, those changes were already made and it is all set. 
 
 #### Option 2 (Advanced)
