@@ -107,11 +107,13 @@ When you try using pip, it will try to download the most recent version 0.33.0 o
   - g++ (>= 4.8) and CMake
   
   for that:
+  
   ```sudo apt-get install cmake```
   
   - If building LLVM on Ubuntu, the linker may report an error if the development version of libedit is not installed. If you run into this problem, install libedit-dev.
   
   And for that:
+  
   ```sudo apt-get install libedit-dev```
   
 ##### Step 1: Install LLVM:
@@ -123,12 +125,38 @@ https://apt.llvm.org/
 In our case, we wil need the llvm 9 for debian buster since that's what the Raspibian OS being used is based on.
 
 Use this command:
+
 ```wget http://apt.llvm.org/buster/ llvm-toolchain-buster-9 main```
+
 or this one:
 
 ```apt-get install clang-9 lldb-9 lld-9```
-``````
 
+##### Step 2: Compile LLVM and Install llvmite:
+
+- Point the path to llvm-config which is probably not in a standard location.
+To know where it is, use:
+
+```which llvm-config```
+
+Copy the path so we can set it as an argument for the following variable instantiation:
+
+```LLVM_CONFIG=<path>```
+
+Like in the following example: 
+
+```LLVM_CONFIG=/opt/llvm/bin/llvm-config```
+
+- Since we will be using the variable during the download, instantiate it right before the installing command, in the same line and run:
+
+```LLVM_CONFIG=/opt/llvm/bin/llvm-config sudo pip3 install llvmlite```
+
+- Now get into llvmlite directory and run:
+
+```python setup.py build```
+
+``````
+``````
 ### Step 5: Running a Test Audio File
 The file used is from a barking dog and was named DogWavMono0975secs1600hz15600samples.wav. The name, for now, seems unecessarily long but it is a reminder of the strict values of params that it needs to follow. The original source code was more dynamic but the used library for generating the spectograms could not be used. To change those params, you have to keep in mind the mathematic nature of fourier transformations and make sure that the values correspond to eachother. 
 
