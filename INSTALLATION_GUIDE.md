@@ -83,7 +83,7 @@ To know which version you need of llvm, just check their PyPI page on:
 
 https://pypi.org/project/llvmlite/
 
-if that is your case, jump to step N of Installing llvmlite.
+if that is your case, jump to step 3 of Installing llvmlite.
 
 - 2. You have an older version or do not even have any instance of llvm on your device.
 
@@ -96,8 +96,6 @@ if nothing is shown, you do not have it installed.
 If that is you case, follow all the instructions above.
 
 This process is the most complicated, and i'll also link the oficiall website so you can try both options.
-
-This step is the most complicated, and i'll also link the oficiall website so you can try both options.
 
 http://llvmlite.pydata.org/en/latest/admin-guide/install.html
 
@@ -116,7 +114,7 @@ When you try using pip, it will try to download the most recent version 0.33.0 o
   
   ```sudo apt-get install libedit-dev```
   
-##### Step 1: Install LLVM:
+##### Step 2: Install LLVM:
 
 Go to this website to get the desired version of llvm.
 
@@ -132,7 +130,7 @@ or this one:
 
 ```apt-get install clang-9 lldb-9 lld-9```
 
-##### Step 2: Compile LLVM and Install llvmite:
+##### Step 3: Compile LLVM and Install llvmite:
 
 - Point the path to llvm-config which is probably not in a standard location.
 To know where it is, use:
@@ -149,19 +147,19 @@ Like in the following example:
 
 - Since we will be using the variable during the download, instantiate it right before the installing command, in the same line and run:
 
-```LLVM_CONFIG=/opt/llvm/bin/llvm-config sudo pip3 install llvmlite```
+  ```LLVM_CONFIG=/opt/llvm/bin/llvm-config sudo pip3 install llvmlite```
 
 - Now get into llvmlite directory and run:
 
-```python setup.py build```
+  ```python setup.py build```
 
-``````
-``````
 ### Step 5: Running a Test Audio File
+
 The file used is from a barking dog and was named DogWavMono0975secs1600hz15600samples.wav. The name, for now, seems unecessarily long but it is a reminder of the strict values of params that it needs to follow. The original source code was more dynamic but the used library for generating the spectograms could not be used. To change those params, you have to keep in mind the mathematic nature of fourier transformations and make sure that the values correspond to eachother. 
 
 #### 1. Change to the the cloned repository directory:
-  
+
+  ```cd```
   ```cd tflite_model_audioset_yamnet_modified```
   
 Now that we moved to the application directory, you can also play the audio example by using:
@@ -188,14 +186,12 @@ The expected output should be something like:
   Canidae, dogs, wolves: 0.407
   Bark        : 0.271
   Enviando pattern A para o ESP32
-
   ```
 ## Audio Recording (Ongoing)
 
 We will be using arecord and aplay, the command-line sound recorder and player for ALSA soundcard driver.
 
 ### Step 1: Record an Audio
-
 
 #### 1. Get back to the the application directory
 
@@ -228,4 +224,3 @@ After doing all that, it may not run out of the box because you need to specify 
 ### Step 3: Run the modified inference script (inference8.py) on the captured audio:
 
 ```python3 inference8.py test.wav```
-
