@@ -156,6 +156,10 @@ Like in the following example:
   And then:
   
   ```python3 setup.py install```
+  
+##### Step 4: Update Numba's Colorama Package:
+
+```pi3 install --update colorama```
 
 ### Step 5: Running a Test Audio File
 
