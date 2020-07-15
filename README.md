@@ -59,9 +59,18 @@ Check the INSTALLATION_GUIDE file for examples on running the application and a 
   
   ```python3 example.py```
   
-  Expected Output:
+  The expected output should be something like:
   
-
+  ```
+  DogWavMono0975secs1600hz15600samples.wav :
+  Animal      : 0.987
+  Domestic animals, pets: 0.933
+  Dog         : 0.912
+  Canidae, dogs, wolves: 0.407
+  Bark        : 0.271
+  Enviando pattern A para o ESP32
+  ```
+  
   - Records the enviroment and makes an inference 5 times:
   
   ```python3 example2.py```
