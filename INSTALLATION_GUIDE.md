@@ -95,16 +95,39 @@ if nothing is shown, you do not have it installed.
 
 If that is you case, follow all the instructions above.
 
-##### Step 1:
+This process is the most complicated, and i'll also link the oficiall website so you can try both options.
 
 This step is the most complicated, and i'll also link the oficiall website so you can try both options.
 
 http://llvmlite.pydata.org/en/latest/admin-guide/install.html
-``````
+
+##### Step 1: Get Prerequisite packages:
+When you try using pip, it will try to download the most recent version 0.33.0 or further which requires llvm 9 so we will need to install it first. But before we install llvm 9 we need to install some prerequisite packages: 
+- On Linux:
+  - g++ (>= 4.8) and CMake
+  
+  for that:
+  ```sudo apt-get install cmake```
+  
+  - If building LLVM on Ubuntu, the linker may report an error if the development version of libedit is not installed. If you run into this problem, install libedit-dev.
+  
+  And for that:
+  ```sudo apt-get install libedit-dev```
+  
+##### Step 1: Install LLVM:
+
+Go to this website to get the desired version of llvm.
 
 https://apt.llvm.org/
 
-deb http://apt.llvm.org/buster/ llvm-toolchain-buster-9 main
+In our case, we wil need the llvm 9 for debian buster since that's what the Raspibian OS being used is based on.
+
+Use this command:
+```wget http://apt.llvm.org/buster/ llvm-toolchain-buster-9 main```
+or this one:
+
+```apt-get install clang-9 lldb-9 lld-9```
+``````
 
 ### Step 5: Running a Test Audio File
 The file used is from a barking dog and was named DogWavMono0975secs1600hz15600samples.wav. The name, for now, seems unecessarily long but it is a reminder of the strict values of params that it needs to follow. The original source code was more dynamic but the used library for generating the spectograms could not be used. To change those params, you have to keep in mind the mathematic nature of fourier transformations and make sure that the values correspond to eachother. 
