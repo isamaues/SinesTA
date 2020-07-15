@@ -65,6 +65,7 @@ The problem is probably because pip can not build wheels for the most recent ver
 Since pip is not work we can use apt instead. The problem with using apt is that they don't usually are up to date and usually contains older versions but that's the only oficial option for now, but you can always try those wheels built by the community as well. When i ran the following command i only got the scipy 1.1, but it still worked fine with resampy.
 
 ```sudo apt update```
+
 ```sudo apt install -y python3-scipy```
 
 #### Installing llvmlite:
@@ -161,6 +162,12 @@ Like in the following example:
 
 ```pi3 install --update colorama```
 
+#### Installing Resampy:
+
+Now it should run with no problems.
+
+```pip3 install resampy```
+
 ### Step 5: Running a Test Audio File
 
 The file used is from a barking dog and was named DogWavMono0975secs1600hz15600samples.wav. The name, for now, seems unecessarily long but it is a reminder of the strict values of params that it needs to follow. The original source code was more dynamic but the used library for generating the spectograms could not be used. To change those params, you have to keep in mind the mathematic nature of fourier transformations and make sure that the values correspond to eachother. 
@@ -168,6 +175,7 @@ The file used is from a barking dog and was named DogWavMono0975secs1600hz15600s
 #### 1. Change to the the cloned repository directory:
 
   ```cd```
+  
   ```cd tflite_model_audioset_yamnet_modified```
   
 Now that we moved to the application directory, you can also play the audio example by using:
