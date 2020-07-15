@@ -47,3 +47,16 @@ All those files can still be found on the original repository as mentioned above
 
 Check the INSTALLATION_GUIDE file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
 
+# Examples (Ongoing)
+
+- 1. Go to the project directory:
+
+```cd tflite_model_audioset_yamnet_modified```
+
+- 2. Run one of the following examples:
+
+- Uses a test file
+```python3 example.py```
+
+- Records the enviroment and makes an inference 5 times:
+```python3 example2.py```
