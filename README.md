@@ -74,3 +74,6 @@ Check the INSTALLATION_GUIDE file for examples on running the application and a 
   - Records the enviroment and makes an inference 5 times:
   
   ```python3 example2.py```
+  
+  # Run the Application (NEXT!)
+  Endless running the aplication.
