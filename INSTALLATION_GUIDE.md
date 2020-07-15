@@ -151,7 +151,11 @@ Like in the following example:
 
 - Now get into llvmlite directory and run:
 
-  ```python setup.py build```
+  ```python3 setup.py build```
+  
+  And then:
+  
+  ```python3 setup.py install```
 
 ### Step 5: Running a Test Audio File
 
@@ -169,7 +173,7 @@ Now that we moved to the application directory, you can also play the audio exam
 #### 2. Run the modified inference script (inference8.py) on the given audio example:
  - Option 1
 
-  ```python inference8.py DogWavMono0975secs1600hz15600samples.wav```
+  ```python3 inference8.py DogWavMono0975secs1600hz15600samples.wav```
   
  - Option 2 (Recommended)
   
