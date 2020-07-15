@@ -138,6 +138,10 @@ To know where it is, use:
 
 ```which llvm-config```
 
+or:
+
+```sudo find / -iname llvm-config```
+
 Copy the path so we can set it as an argument for the following variable instantiation:
 
 ```LLVM_CONFIG=<path>```
