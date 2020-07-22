@@ -13,6 +13,7 @@ echo "soundfile ok"
 pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
 echo "Tensorflow Lite Interpreter ok"
 sudo apt update sudo apt install -y python3-scipy
+sudo apt-get install libatlas-base-dev
 echo "scipy ok"
 echo "preparing for installing llvmlite"
 #pip3 install llvmlite #depois fazer um teste pra tentar instalar com o pip antes de fazer tudo isso a seguir
@@ -34,7 +35,7 @@ python3 setup.py build
 #python3 setup.py install
 echo "llvmlite ok"
 cd
-pi3 install --upgrade colorama
+pip3 install --upgrade colorama
 pip3 install resampy
 echo "resampy ok"
 echo "DONE :) ---------------------------------"
