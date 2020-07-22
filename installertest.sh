@@ -20,7 +20,7 @@ sudo apt-get install cmake -y
 sudo apt-get install libedit-dev -y
 #apt-get install clang-9 lldb-9 lld-9 -y
 #sudo apt-get install libllvm-9-ocaml-dev libllvm9 llvm-9 llvm-9-dev llvm-9-doc llvm-9-examples llvm-9-runtime
-sudo apt-get install libllvm-9-ocaml-dev libllvm9 llvm-9 llvm-9-dev llvm-9-runtime -y
+sudo apt-get install libllvm-9-ocaml-dev libllvm9 llvm-9 llvm-9-dev llvm-9-doc llvm-9-runtime -y
 #which llvm-config
 #sudo find / -iname llvm_config
 #LLVM_CONFIG=<path>
