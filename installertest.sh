@@ -31,7 +31,7 @@ LLVM_CONFIG=/usr/lib/llvm-9/bin/llvm-config pip3 install llvmlite
 #cd llvmlite
 #cd /home/pi/.local/lib/python3.7/site-packages/llvmlite
 cd /usr/local/lib/python3.7/dist-packages/llvmlite
-python3 setup.py build
+#python3 setup.py build
 #python3 setup.py install
 echo "llvmlite ok"
 cd
