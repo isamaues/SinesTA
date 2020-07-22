@@ -43,7 +43,7 @@ All those files can still be found on the original repository as mentioned above
 
 - 3. Run the installer by using the following command:
 
-```bash installertest.sh```
+```sudo bash installertest.sh```
 
 Check the INSTALLATION_GUIDE file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
 
