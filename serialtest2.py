@@ -10,17 +10,17 @@ def main(argv):
     #print(ser.is_open) #True
     #print(ser)
     time.sleep(3)
-    if (argv == 'A'):
+    if (argv[0] == 'A'):
         ser.write(b'[A]')
-    elif (argv == 'B'):
+    elif (argv[0] == 'B'):
         ser.write(b'[B]')
-    elif (argv == 'C'):
+    elif (argv[0] == 'C'):
         ser.write(b'[C]')
-    elif (argv == 'D'):
+    elif (argv[0] == 'D'):
         ser.write(b'[D]')
-    elif (argv == 'E'):
+    elif (argv[0] == 'E'):
         ser.write(b'[E]')
     ser.close()
     #print(ser.is_open) #False
 if __name__ == '__main__':
-  main(sys.argv[0])
+  main(sys.argv[1:])
