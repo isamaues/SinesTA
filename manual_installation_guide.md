@@ -1,4 +1,4 @@
-# Installation Guide
+# Manual Installation Guide
 This is a tutorial for installing and running this application on a Raspberry Pi 3 B using Raspberry Pi OS (32-bit) with desktop (gcc 8.3.0).
 
 ## Audio Recognition
