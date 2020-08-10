@@ -1,4 +1,4 @@
-# tflite_model_adioset_yamnet_modified
+# SinesTA
   Slightly modified version of the yamnet and tensorflow implementations used on a audio recognition research project with academic purpose. The project is still on development and tests stages so none of it has been published or presented yet.
 
 Original version's repository:
@@ -14,13 +14,12 @@ Those files are not used on the application.
 - yamnet_test.py
 - features.py
 
-
 All those files can still be found on the original repository as mentioned above.
 
 ## Files added:
-- inference8.py:
+- inference9.py:
 
-  Changes were made to the original inference.py example file to be used with TFLite instead of the regular version of Tensorflow.
+  Changes were made to the original inference.py example file to be used with TFLite instead of the regular version of Tensorflow. Now it also sends a bluetooth message with the corresponding audio classsification to be translated to vibration codes by the ESP32 system.
 
 - features_tflite.py:
 
@@ -30,16 +29,16 @@ All those files can still be found on the original repository as mentioned above
 
 - yamnet.tflite:
 
-  For compiling the a Lite the YAMNet model on raspberry pi.
+  For compiling the a Lite version of the YAMNet model on raspberry pi.
 
 # Installation
 - 1. Clone this repo and use the new installer:
 
-```git clone https://github.com/isamaues/tflite_model_audioset_yamnet_modified```
+```git clone https://github.com/isamaues/SinesTA/source```
  
 - 2. Go to the project directory:
 
-```cd tflite_model_audioset_yamnet_modified```
+```cd SinesTA/source```
 
 - 3. Run the installer by using the following command:
 
@@ -51,7 +50,7 @@ Check the INSTALLATION_GUIDE file for examples on running the application and a 
 
 - 1. Go to the project directory:
 
-```cd tflite_model_audioset_yamnet_modified```
+```cd SinesTA/source```
 
 - 2. Run one of the following examples:
 
@@ -62,7 +61,7 @@ Check the INSTALLATION_GUIDE file for examples on running the application and a 
   The expected output should be something like:
   
   ```
-  DogWavMono0975secs1600hz15600samples.wav :
+  barkingDog.wav :
   Animal      : 0.987
   Domestic animals, pets: 0.933
   Dog         : 0.912
