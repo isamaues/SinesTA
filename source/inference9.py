@@ -97,7 +97,7 @@ def main(argv):
     for i in top5_i:
         if (yamnet_classes[i] in encodedClassesDict.keys()):
             #Chamar script que envia a mensagem para o ESP32 por Bluetooth
-            os.system("python3 serialtest3.py " + encodedClassesDict[yamnet_classes[i]])
+            os.system("python3 serialsend.py " + encodedClassesDict[yamnet_classes[i]])
             print ('Enviando pattern', encodedClassesDict[yamnet_classes[i]], 'para o ESP32' )              
     
 if __name__ == '__main__':
