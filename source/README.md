@@ -9,4 +9,4 @@
 
 - File naming convention:
 
-  myFile
+  my_file
