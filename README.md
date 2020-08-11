@@ -5,7 +5,8 @@ Original version's repository:
 
 https://github.com/tensorflow/models/tree/master/research/audioset/yamnet
 
-## Files removed:
+## Changes made to the original projects:
+### Files removed:
 
 Those files are not used on the application.
 - README.md
@@ -14,12 +15,12 @@ Those files are not used on the application.
 - yamnet_test.py
 - features.py
 
-All those files can still be found on the original repository as mentioned above.
+All those files can still be found on the original repository mentioned above.
 
-## Files added:
-- inference9.py:
+### Files added:
+- inference_bt.py:
 
-  Changes were made to the original inference.py example file to be used with TFLite instead of the regular version of Tensorflow. Now it also sends a bluetooth message with the corresponding audio classsification to be translated to vibration codes by the ESP32 system.
+  Changes were made to the original inference.py example file to be used with TFLite instead of the regular version of Tensorflow. It also sends a bluetooth message with the corresponding audio classsification to be translated to vibration codes by the ESP32 system.
 
 - features_tflite.py:
 
@@ -31,7 +32,9 @@ All those files can still be found on the original repository as mentioned above
 
   For compiling the a Lite version of the YAMNet model on raspberry pi.
 
-# Installation
+## Installation
+
+### 1. Raspberry Pi 3 B
 - 1. Clone this repo and use the new installer:
 
 ```git clone https://github.com/isamaues/SinesTA/source```
@@ -42,11 +45,39 @@ All those files can still be found on the original repository as mentioned above
 
 - 3. Run the installer by using the following command:
 
-```sudo bash installertest.sh```
+```sudo bash installer.sh```
 
 Check the INSTALLATION_GUIDE file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
 
-# Examples (Ongoing)
+### 2. ESP 32
+Download the file VibrationDecoderESP32.ino and upload the same file to your ESP 32 board using Arduino IDE. If it's running, a built in led will turn on and you will be able to pair and bind the devices.
+
+#### Encoded Classes and corresponding Vibration Patterns
+
+This is the behavior you should expect from your ESP 32 while running this application.
+
+```
+'A' (Bark):                      1 Short Vibration.
+'B' (Beep, bleep):               2 Short Vibrations.
+'C' (Buzzer):                    1 Long Vibration.
+'D' (Speech):                    2 Long Vibrations.
+'E' (Baby cry, infant cry):      1 Short Vibration and 1 Long Vibration.
+```
+
+### 2. Setting Bluetooth
+
+- 1. Pairing:
+
+You just need to do this once for each new device connected. It works with only one device at a time.
+
+- 2. Binding:
+
+- Automatic Binding:
+
+- Manual Binding:
+
+
+## Examples (Ongoing)
 
 - 1. Go to the project directory:
 
@@ -74,5 +105,5 @@ Check the INSTALLATION_GUIDE file for examples on running the application and a 
   
   ```python3 example2.py```
   
-  # Run the Application (NEXT!)
+  ## Run the Application (NEXT!)
   Endless running the aplication.
