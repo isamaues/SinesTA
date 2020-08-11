@@ -89,11 +89,11 @@ You just need to do this once for each new device connected. It works with only 
 - Manual Binding:
 
 
-## Examples (Ongoing)
+## Examples
 
 - 1. Go to the project directory:
 
-```cd SinesTA/source```
+  ```cd SinesTA/source```
 
 - 2. Run one of the following examples:
 
