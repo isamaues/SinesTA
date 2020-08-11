@@ -78,27 +78,27 @@ def main(argv):
     # Average them along time to get an overall classifier output for the clip.
     prediction = np.mean(scores, axis=0)
 
-    print('yamnet_classes:\n', yamnet_classes)
+    #print('yamnet_classes:\n', yamnet_classes)
     #print('prediction:\n', prediction)
 
     # Report the highest-scoring classes and their scores.
     top5_i = np.argsort(prediction)[::-1][:5]
     
-    print('top 5 predictions:\n', top5_i)
+    #print('top 5 predictions:\n', top5_i)
     
     print(file_name, ':\n' + 
           '\n'.join('  {:12s}: {:.3f}'.format(yamnet_classes[i], prediction[i])
                     for i in top5_i))
     
     #Encoding Classificafication (Feedback)
-    encodedClasses = [('Bark', 'A'),('Beep, bleep', 'B'), ('Buzzer','C'), ('Speech', 'D'), ('Baby cry, infant cry', 'E')]
-    encodedClassesDict = dict(encodedClasses)
+    encoded_classes = [('Bark', 'A'),('Beep, bleep', 'B'), ('Buzzer','C'), ('Speech', 'D'), ('Baby cry, infant cry', 'E')]
+    encoded_classes_dict = dict(encoded_classes)
 
     for i in top5_i:
-        if (yamnet_classes[i] in encodedClassesDict.keys()):
+        if (yamnet_classes[i] in encoded_classes_dict.keys()):
             #Chamar script que envia a mensagem para o ESP32 por Bluetooth
-            os.system("python3 serial_send.py " + encodedClassesDict[yamnet_classes[i]])
-            print ('Enviando pattern', encodedClassesDict[yamnet_classes[i]], 'para o ESP32' )              
+            os.system("python3 serial_send.py " + encoded_classes_dict[yamnet_classes[i]])
+            print ('Sending pattern', encoded_classes_dict[yamnet_classes[i]], 'to ESP32' )              
     
 if __name__ == '__main__':
   main(sys.argv[1:])
