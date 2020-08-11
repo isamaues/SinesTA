@@ -82,25 +82,28 @@ This is the behavior you should expect from your ESP 32 while running this appli
 
 Warning: You just need to do this once for each new device connected. It works with only one device at a time.
 
-We will perform an Outbound Pairing, as described on:
+Since it's easier to interact with the Pi, we will perform an Outbound Pairing, as described on:
 
 ```https://core.docs.ubuntu.com/en/stacks/bluetooth/bluez/docs/reference/pairing/outbound```
 
-You can just follow those steps and you it will be paired, but notice it's still not connected.
+You can just follow those steps and you the devices will be paired, but notice they are still not connected.
 
 - 2. Binding:
 
-  - Automatic Binding:
+  - Automatic Binding: it happens when your ESP 32 starts the connection procedure.
+    - Listen for incoming connection on Raspberry Pi.
 
-  - Manual Binding:
+        ```sudo rfcomm watch hci0```
+        
+  - Manual Binding: You will need to create the virtual port and add the device to it since it's not created automatically.
 
-    We need to creat the rfcomm socket that was not created automatically. simply run the commands above:
+    We need to creat the rfcomm socket that is not created automatically. simply run the commands above:
 
     - Make sure you're at root:
     
       ```cd```
 
-    - Use your device MAC adress on "<device>":
+    - Use your ESP 32 device's MAC adress on "<device>":
 
       ```sudo rfcomm bind rfcomm0 <device> add```
 
