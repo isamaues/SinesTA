@@ -1,7 +1,7 @@
 ## Naming Conventions
 - Variable naming convention:
 
-  myVariable
+  my_variable
 
 - Repository naming convention:
 
