@@ -90,18 +90,19 @@ You can just follow those steps and you it will be paired, but notice it's still
 
 - 2. Binding:
 
-- Automatic Binding:
+  - Automatic Binding:
 
-- Manual Binding:
+  - Manual Binding:
 
-We need to creat the rfcomm socket that was not created automatically. simply run the commands above:
+    We need to creat the rfcomm socket that was not created automatically. simply run the commands above:
 
-Make sure you're at root:
-```cd```
+    - Make sure you're at root:
+    
+      ```cd```
 
-Use your device MAC adress on "<device>":
-  
-```sudo rfcomm bind rfcomm0 <device> add```
+    - Use your device MAC adress on "<device>":
+
+      ```sudo rfcomm bind rfcomm0 <device> add```
 
 
 Check out the manual_setting_bluetooth_guide.md for more details and a step by step guide on setting the bluetooth manually if it does not go as expected.
