@@ -53,7 +53,7 @@ All those files can still be found on the original repository mentioned above.
 
 ```sudo bash installer.sh```
 
-Check the INSTALLATION_GUIDE file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
+Check the manual_installation_guide.md file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
 
 ### 2. ESP 32
 
@@ -80,7 +80,13 @@ This is the behavior you should expect from your ESP 32 while running this appli
 
 - 1. Pairing:
 
-You just need to do this once for each new device connected. It works with only one device at a time.
+Warning: You just need to do this once for each new device connected. It works with only one device at a time.
+
+We will perform an Outbound Pairing, as described on:
+
+```https://core.docs.ubuntu.com/en/stacks/bluetooth/bluez/docs/reference/pairing/outbound```
+
+You can just follow those steps and you it will be paired, but notice it's still not connected.
 
 - 2. Binding:
 
@@ -88,6 +94,17 @@ You just need to do this once for each new device connected. It works with only 
 
 - Manual Binding:
 
+We need to creat the rfcomm socket that was not created automatically. simply run the commands above:
+
+Make sure you're at root:
+```cd```
+
+Use your device MAC adress on "<device>":
+  
+```sudo rfcomm bind rfcomm0 <device> add```
+
+
+Check out the manual_setting_bluetooth_guide.md for more details and a step by step guide on setting the bluetooth manually if it does not go as expected.
 
 ## Examples
 
