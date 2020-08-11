@@ -17,7 +17,7 @@ const int motorPin = 15;
 
 void setup() {
   Serial.begin(9600);
-  SerialBT.begin("ESP32test"); //Bluetooth device name
+  SerialBT.begin("ESP32_SinesTA"); //Bluetooth device name
   Serial.println("The device started, now you can pair it with bluetooth!");
   //SerialBT.enableSSP();
   //SerialBT.connect("B8:27:EB:8A:3D:B2");
