@@ -1,6 +1,12 @@
 # SinesTA
   Slightly modified version of the yamnet and tensorflow implementations used on a audio recognition research project with academic purpose. The project is still on development and tests stages so none of it has been published or presented yet.
 
+## You will need:
+- Raspberry Pi 3 B
+- ESP 32
+- Vibration Motor (A jumper cable may also be needed)
+- USB Microphone or a USB P&P Soundcard + Microphone
+
 Original version's repository:
 
 https://github.com/tensorflow/models/tree/master/research/audioset/yamnet
@@ -50,6 +56,12 @@ All those files can still be found on the original repository mentioned above.
 Check the INSTALLATION_GUIDE file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
 
 ### 2. ESP 32
+
+#### Setting Vibration Motor
+Check out the pin sheet of your ESP 32 and plug the corresponding pins of your vibration module that may vary from model to model. Some vibration models, as the one being used, already have build in voltage treatment, otherwhise you will need to build the entire system to control the voltage with resistors and stuff.
+
+#### Uploading the arduino code to ESP32
+
 Download the file VibrationDecoderESP32.ino and upload the same file to your ESP 32 board using Arduino IDE. If it's running, a built in led will turn on and you will be able to pair and bind the devices.
 
 #### Encoded Classes and corresponding Vibration Patterns
@@ -64,7 +76,7 @@ This is the behavior you should expect from your ESP 32 while running this appli
 'E' (Baby cry, infant cry):      1 Short Vibration and 1 Long Vibration.
 ```
 
-### 2. Setting Bluetooth
+### 3. Setting Bluetooth
 
 - 1. Pairing:
 
