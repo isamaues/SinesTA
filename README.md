@@ -101,6 +101,8 @@ No matter the case, the connection will only be open while Raspberry Pi is sendi
 
 - 2. Jump to the "Run the Application" section.
 
+    https://github.com/isamaues/SinesTA/blob/master/README.md#run-the-application-next
+
 Check out the manual_setting_bluetooth_guide.md for a step by step guide on setting the bluetooth manually and more details if it does not go as expected.
 
 ## Examples
