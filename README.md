@@ -137,7 +137,7 @@ https://github.com/isamaues/SinesTA/blob/master/manual_setting_bluetooth_guide.m
   
     ```python3 example2.py```
   
-## Run the Application (NEXT!)
+## Run the Application
 Endless running the aplication.
   
 ```sudo bash SinesTA.sh```
