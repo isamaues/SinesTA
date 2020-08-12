@@ -131,7 +131,7 @@ Check out the manual_setting_bluetooth_guide.md for a step by step guide on sett
   
     ```python3 example2.py```
   
-  ## Run the Application (NEXT!)
-  Endless running the aplication.
+## Run the Application (NEXT!)
+Endless running the aplication.
   
-  ```sudo bash SinesTA.sh```
+```sudo bash SinesTA.sh```
