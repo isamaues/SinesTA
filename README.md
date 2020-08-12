@@ -57,6 +57,8 @@ All those files can still be found on the original repository mentioned above.
 
 Check the manual_installation_guide.md file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
 
+https://github.com/isamaues/SinesTA/blob/master/manual_installation_guide.md#manual-installation-guide
+
 ### 2. ESP 32
 
 #### Setting Vibration Motor
