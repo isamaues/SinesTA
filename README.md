@@ -45,7 +45,7 @@ All those files can still be found on the original repository mentioned above.
 ### 1. Raspberry Pi 3 B
 - 1. Clone this repo and use the new installer:
 
-   ```git clone https://github.com/isamaues/SinesTA/source```
+   ```git clone https://github.com/isamaues/SinesTA.git```
  
 - 2. Go to the project directory:
 
