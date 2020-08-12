@@ -43,15 +43,15 @@ All those files can still be found on the original repository mentioned above.
 ### 1. Raspberry Pi 3 B
 - 1. Clone this repo and use the new installer:
 
-```git clone https://github.com/isamaues/SinesTA/source```
+   ```git clone https://github.com/isamaues/SinesTA/source```
  
 - 2. Go to the project directory:
 
-```cd SinesTA/source```
+   ```cd SinesTA/source```
 
 - 3. Run the installer by using the following command:
 
-```sudo bash installer.sh```
+   ```sudo bash installer.sh```
 
 Check the manual_installation_guide.md file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
 
@@ -85,7 +85,7 @@ Warning: You just need to do this once for each new device connected. It works w
 
 - You can alternatively connect via terminal or do it if it's the only avaiable option. For that, since it's easier to interact with the Pi, we will perform an Outbound Pairing, as described on:
 
-```https://core.docs.ubuntu.com/en/stacks/bluetooth/bluez/docs/reference/pairing/outbound```
+   ```https://core.docs.ubuntu.com/en/stacks/bluetooth/bluez/docs/reference/pairing/outbound```
 
 You can just follow those steps and you the devices will be paired, but notice they are still not connected.
 
@@ -95,7 +95,7 @@ No matter the case, the connection will only be open while Raspberry Pi is sendi
 
 - 1. If running the examples or making tests by yourself, set the RFCOMM socket first and bind the devices by simply running:
 
-```sudo bash set_rfcomm.sh ```
+   ```sudo bash set_rfcomm.sh ```
 
 - 2. Jump to the "Run the Application" section.
 
@@ -105,13 +105,13 @@ Check out the manual_setting_bluetooth_guide.md for a step by step guide on sett
 
 - 1. Go to the project directory:
 
-  ```cd SinesTA/source```
+      ```cd SinesTA/source```
 
 - 2. Run one of the following examples:
 
   - Uses a test file:
   
-  ```python3 example.py```
+    ```python3 example.py```
   
   The expected output should be something like:
   
@@ -127,7 +127,7 @@ Check out the manual_setting_bluetooth_guide.md for a step by step guide on sett
   
   - Records the enviroment and makes an inference 5 times:
   
-  ```python3 example2.py```
+    ```python3 example2.py```
   
   ## Run the Application (NEXT!)
   Endless running the aplication.
