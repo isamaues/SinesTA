@@ -8,4 +8,8 @@ if [ ! -f "$FILE" ]; then
     #if it does not exists: rfcomm manual bind
     sudo rfcomm bind rfcomm0 ESP32_SinesTA
 fi
-#after binding connect devices
+#This binds the RFCOMM device to a remote Bluetooth device. 
+#The command did not establish a connection to the remote device, it only creates the binding. 
+#The connection will be established right after an application tries to open the RFCOMM device. 
+#If no channel number is specified, it uses the channel number 1. 
+#If the Bluetooth address is also left out, it tries to read the data from the config file.es
