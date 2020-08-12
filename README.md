@@ -59,7 +59,7 @@ Check out the manual_installation_guide.md file for examples on running the appl
 
 https://github.com/isamaues/SinesTA/blob/master/manual_installation_guide.md#manual-installation-guide
 
-### 2. ESP 32
+### 2. ESP32
 
 #### Setting Vibration Motor
 Check out the pin sheet of your ESP32 and plug the corresponding pins of your vibration module that may vary from model to model. Some vibration models, as the one being used, already have build in voltage treatment, otherwhise you will need to build the entire system to control the voltage with resistors and stuff.
