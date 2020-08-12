@@ -78,13 +78,8 @@ def main(argv):
     # Average them along time to get an overall classifier output for the clip.
     prediction = np.mean(scores, axis=0)
 
-    #print('yamnet_classes:\n', yamnet_classes)
-    #print('prediction:\n', prediction)
-
     # Report the highest-scoring classes and their scores.
     top5_i = np.argsort(prediction)[::-1][:5]
-    
-    #print('top 5 predictions:\n', top5_i)
     
     print(file_name, ':\n' + 
           '\n'.join('  {:12s}: {:.3f}'.format(yamnet_classes[i], prediction[i])
@@ -96,7 +91,6 @@ def main(argv):
 
     for i in top5_i:
         if (yamnet_classes[i] in encoded_classes_dict.keys()):
-            #Chamar script que envia a mensagem para o ESP32 por Bluetooth
             os.system("python3 serial_send.py " + encoded_classes_dict[yamnet_classes[i]])
             print ('Sending pattern', encoded_classes_dict[yamnet_classes[i]], 'to ESP32' )              
     
