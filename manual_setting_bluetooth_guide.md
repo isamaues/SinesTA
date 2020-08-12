@@ -27,9 +27,11 @@ You can just follow those steps and you the devices will be paired, but notice t
 
 ### Automatic Binding
 it happens when your ESP 32 starts the connection procedure.
-    - Listen for incoming connection on Raspberry Pi.
 
-        ```sudo rfcomm watch hci0```
+- Listen for incoming connection on Raspberry Pi.
+
+  ```sudo rfcomm watch hci0```
+
 ### Manual Binding
 
 You will need to create the virtual port and add the device to it since it's not created automatically.
