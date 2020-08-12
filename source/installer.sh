@@ -11,7 +11,8 @@ pip3 install soundfile
 #echo "soundfile ok"
 pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
 #echo "Tensorflow Lite Interpreter ok"
-sudo apt update sudo apt install -y python3-scipy
+#sudo apt update 
+sudo apt install -y python3-scipy
 sudo apt-get install libatlas-base-dev -y
 #echo "scipy ok"
 echo "preparing to install llvmlite"
