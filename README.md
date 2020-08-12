@@ -78,7 +78,20 @@ This is the behavior you should expect from your ESP 32 while running this appli
 
 ### 3. Setting Bluetooth
 
-Instructions avaiable only for manual setting. Check out the manual_setting_bluetooth_guide.md for a step by step guide on setting the bluetooth manually and more details if it does not go as expected.
+#### Pairing devices
+You only need to do this once. Run the following script:
+
+```sudo bash pairing.sh```
+
+#### Set RFCOMM or Start the aplication right away!
+
+- If running the examples or making tests by yourself, set the RFCOMM socket first and bind the devices by simply running:
+
+```sudo bash set_rfcomm.sh ```
+
+- Jump to the "Run the Application" section.
+
+Check out the manual_setting_bluetooth_guide.md for a step by step guide on setting the bluetooth manually and more details if it does not go as expected.
 
 ## Examples
 
@@ -110,3 +123,5 @@ Instructions avaiable only for manual setting. Check out the manual_setting_blue
   
   ## Run the Application (NEXT!)
   Endless running the aplication.
+  
+  ```sudo bash SinesTA.sh```
