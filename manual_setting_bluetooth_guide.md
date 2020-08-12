@@ -10,6 +10,7 @@ Since it's easier to interact with the Pi, we will perform an Outbound Pairing, 
 You can just follow those steps and you the devices will be paired, but notice they are still not connected.
 
 ## Enable SSP Profile on Raspberry Pi
+It's actually enabling sdp profile and i'm using rfcomm(native) so it might be pointless.
 
 - 1. Open Bluetooth service configuration file.
 
