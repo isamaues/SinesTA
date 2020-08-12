@@ -42,6 +42,6 @@ We need to creat the rfcomm socket that is not created automatically. simply run
     
   ```cd```
 
-- Use your ESP 32 device's MAC adress on "<device>":
+- Use your ESP 32 device's MAC adress or as it follows:
 
-  ```sudo rfcomm bind rfcomm0 <device> add```
+  ```sudo rfcomm bind rfcomm0 ESP32_SinesTA```
