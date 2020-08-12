@@ -79,17 +79,25 @@ This is the behavior you should expect from your ESP 32 while running this appli
 ### 3. Setting Bluetooth
 
 #### Pairing devices
-You only need to do this once. Run the following script:
+Warning: You just need to do this once for each new device connected. It works with only one device at a time.
 
-```sudo bash pairing.sh```
+- If using a Raspberry Pi OS with GUI, simply click on the bluetooth icon on the top right corner and sellect Add device. A list of avaiable devices will appear and you select the device called "ESP32_SinesTA" or with any device name you have choosen previously to your ESP32 board or it's MAC adress. You can now click on pair with the desired device selected and they will be paired.
 
-#### Set RFCOMM or Start the aplication right away!
+- You can alternatively connect via terminal or do it if it's the only avaiable option. For that, since it's easier to interact with the Pi, we will perform an Outbound Pairing, as described on:
 
-- If running the examples or making tests by yourself, set the RFCOMM socket first and bind the devices by simply running:
+```https://core.docs.ubuntu.com/en/stacks/bluetooth/bluez/docs/reference/pairing/outbound```
+
+You can just follow those steps and you the devices will be paired, but notice they are still not connected.
+
+#### Connection:
+##### Set RFCOMM or Start the aplication right away!
+No matter the case, the connection will only be open while Raspberry Pi is sending a message to ESP32 as a result of an iteration of the app.
+
+- 1. If running the examples or making tests by yourself, set the RFCOMM socket first and bind the devices by simply running:
 
 ```sudo bash set_rfcomm.sh ```
 
-- Jump to the "Run the Application" section.
+- 2. Jump to the "Run the Application" section.
 
 Check out the manual_setting_bluetooth_guide.md for a step by step guide on setting the bluetooth manually and more details if it does not go as expected.
 
