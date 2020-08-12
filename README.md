@@ -55,7 +55,7 @@ All those files can still be found on the original repository mentioned above.
 
    ```sudo bash installer.sh```
 
-Check the manual_installation_guide.md file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
+Check out the manual_installation_guide.md file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
 
 https://github.com/isamaues/SinesTA/blob/master/manual_installation_guide.md#manual-installation-guide
 
@@ -106,6 +106,8 @@ No matter the case, the connection will only be open while Raspberry Pi is sendi
     https://github.com/isamaues/SinesTA/blob/master/README.md#run-the-application-next
 
 Check out the manual_setting_bluetooth_guide.md for a step by step guide on setting the bluetooth manually and more details if it does not go as expected.
+
+https://github.com/isamaues/SinesTA/blob/master/manual_setting_bluetooth_guide.md#instructions-on-how-to-set-bluetooth-server-pairing-and-connection
 
 ## Examples
 
