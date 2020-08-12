@@ -1,11 +1,13 @@
 # SinesTA
   Slightly modified version of the yamnet and tensorflow implementations used on a audio recognition research project with academic purpose. The project is still on development and tests stages so none of it has been published or presented yet.
+  
+  This project was created based on hearing impaired people's necessities in a domestic environment. A relatively portable embedded system capable of encoding sound classfication to vibration patterns was created as a new concept of user feedback to improve the user's experience. The raspberry Pi will be constantly listenning to the enviromment and the portable ESP 32 system will be tranlating the received classification codes to vibrations which will be recognizable by the user as they move around their home during dayly and domestic activities.
 
 ## You will need:
 - Raspberry Pi 3 B
 - ESP 32
 - Vibration Motor (A jumper cable may also be needed)
-- USB Microphone or a USB P&P Soundcard + Microphone
+- USB Microphone or an USB P&P Soundcard + Microphone
 
 Original version's repository:
 
