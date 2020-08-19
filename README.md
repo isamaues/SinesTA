@@ -29,7 +29,7 @@ All those files can still be found on the original repository mentioned above.
 ### Files added:
 - inference_bt.py:
 
-  Changes were made to the original inference.py example file to be used with TFLite instead of the regular version of Tensorflow. It also sends a bluetooth message with the corresponding audio classsification to be translated to vibration codes by the ESP32 system.
+  Changes were made to the original inference.py example file for it to be used with TFLite instead of the regular version of Tensorflow. It also sends a bluetooth message with the corresponding audio classsification to be translated to vibration codes by the ESP32 system.
 
 - features_tflite.py:
 
