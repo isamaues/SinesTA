@@ -9,11 +9,12 @@
 - Vibration Motor (A jumper cable may also be needed)
 - USB Microphone or an USB P&P Soundcard + Microphone
 
+## Changes made to the original projects:
+
 Original version's repository:
 
 https://github.com/tensorflow/models/tree/master/research/audioset/yamnet
 
-## Changes made to the original projects:
 ### Files removed:
 
 Those files are not used on the application.
