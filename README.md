@@ -139,5 +139,7 @@ https://github.com/isamaues/SinesTA/blob/master/manual_setting_bluetooth_guide.m
   
 ## Run the Application
 Endless running the aplication.
-  
+
+```cd SinesTA/source```
+
 ```sudo bash SinesTA.sh```
