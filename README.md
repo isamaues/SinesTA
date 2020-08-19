@@ -97,7 +97,7 @@ card 2: Device [USB PnP Sound Device], device 0: USB Audio [USB Audio]
   Subdevice #0: subdevice #0
 ```
 
-It says "card 2" and "device 0" so for the files:
+It says "card 2" and "device 0", so for the files:
 
 - SinesTa.sh
 - example1.py
