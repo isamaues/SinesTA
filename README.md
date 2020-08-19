@@ -80,7 +80,34 @@ This is the behavior you should expect from your ESP 32 while running this appli
 'E' (Baby cry, infant cry):      1 Short Vibration and 1 Long Vibration.
 ```
 
-### 3. Setting Bluetooth
+### 3. Adjusting the Microphone
+
+You will need to select your microphone based on the corresponding soundcard and device number. To check all the avaiable devices, just enter the following command for arecord to list all the available devices:
+
+```arecord -l```
+
+For me it shows the following message:
+
+```
+pi@raspberrypi:~/SinesTA/source $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 2: Device [USB PnP Sound Device], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+```
+
+It says "card 2" and "device 0" so for the files:
+
+- SinesTa.sh
+- example1.py
+- example2.py
+
+You will need to replace "hw:1,0", which are some default values that work most of the time, for "hw:2,0" or whatever value your pcm card and device are if:
+
+- 1. Before starting, after trying those commands, you notice your hw values are different from 1,0.
+- 2. The examples or the application does not run out of the box and errors like "no such file or directory found" are thrown after trying to do so.
+
+### 4. Setting Bluetooth
 
 #### Pairing devices
 Warning: You just need to do this once for each new device connected. It works with only one device at a time.
