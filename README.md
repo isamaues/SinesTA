@@ -107,6 +107,8 @@ You will need to replace "hw:1,0", which are some default values that work most 
 - 1. Before starting, after trying those commands, you notice your hw values are different from 1,0.
 - 2. The examples or the application does not run out of the box and errors like "no such file or directory found" are thrown after trying to do so.
 
+Tip: You can also try to switch your device between ports and check if the values of pcm card and device has changed to the desired one by physically unpluging and plunging it back into a different USB port.
+
 ### 4. Setting Bluetooth
 
 #### Pairing devices
