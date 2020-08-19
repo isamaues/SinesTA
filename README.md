@@ -111,7 +111,7 @@ https://github.com/isamaues/SinesTA/blob/master/manual_setting_bluetooth_guide.m
 
 ## Examples
 
-- 1. Go to the project directory:
+- 1. Go to the project`s directory:
 
       ```cd SinesTA/source```
 
@@ -119,7 +119,8 @@ https://github.com/isamaues/SinesTA/blob/master/manual_setting_bluetooth_guide.m
 
   - Uses a test file:
   
-    ```python3 example.py```
+    ```cd examples```
+    ```python3 example1.py```
   
   The expected output should be something like:
   
@@ -135,6 +136,7 @@ https://github.com/isamaues/SinesTA/blob/master/manual_setting_bluetooth_guide.m
   
   - Records the enviroment and makes an inference 5 times:
   
+    ```cd examples```
     ```python3 example2.py```
   
 ## Run the Application
