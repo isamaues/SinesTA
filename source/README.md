@@ -13,13 +13,15 @@
 
   my_file
   
-## Example files (.py)
+## Example files
 The examples above tests 2 scenarios of usage for this application; single interation with a pre-recorded audio and in a loop. 
 
-## Example 1
+- example1.py
+
 Uses an audio example file and makes a single interation of the inference code.
 
-## Example 2
+- example2.py
+
 Records the enviroment and makes an inference 5 times.
 
 ## Audio Examples files (.wav)
