@@ -16,8 +16,6 @@ sudo apt-get install cmake -y
 sudo apt-get install libedit-dev -y
 sudo apt-get install libllvm-9-ocaml-dev libllvm9 llvm-9 llvm-9-dev llvm-9-doc llvm-9-examples llvm-9-runtime -y
 LLVM_CONFIG=/usr/lib/llvm-9/bin/llvm-config pip3 install llvmlite
-cd /usr/local/lib/python3.7/dist-packages/llvmlite
-cd
 pip3 install --upgrade colorama
 pip3 install resampy
 echo "DONE (if no errors) :) ---------------------------------"
