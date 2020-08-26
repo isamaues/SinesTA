@@ -60,7 +60,6 @@ def main(argv):
   for file_name in argv:
     # Decode the WAV file.
     wav_data, sr = sf.read(file_name, dtype=np.int16)
-    print("sample rate: ", sr)
     assert wav_data.dtype == np.int16, 'Bad sample type: %r' % wav_data.dtype
     waveform = wav_data / 32768.0  # Convert to [-1.0, +1.0]
 
