@@ -121,19 +121,15 @@ Warning: You just need to do this once for each new device connected. It works w
 
    ```https://core.docs.ubuntu.com/en/stacks/bluetooth/bluez/docs/reference/pairing/outbound```
 
-You can just follow those steps and you the devices will be paired, but notice they are still not connected.
+You can just follow those steps and the devices will be paired, but notice they are still not connected.
 
 #### Connection:
-##### Set RFCOMM or Start the aplication right away!
-No matter the case, the connection will only be open while Raspberry Pi is sending a message to ESP32 as a result of an iteration of the app.
+##### Set RFCOMM
+The connection will only be open while Raspberry Pi is sending a message to ESP32 as a result of an iteration of the app.
 
-- 1. If running the examples or making tests by yourself, set the RFCOMM socket first and bind the devices by simply running:
+- You only need to do this once, which will set the rfcomm channel where the bytes will be sent to ESP32.
 
    ```sudo bash set_rfcomm.sh ```
-
-- 2. Jump to the "Run the Application" section.
-
-    https://github.com/isamaues/SinesTA/blob/master/README.md#run-the-application-next
 
 Check out the manual_setting_bluetooth_guide.md for a step by step guide on setting the bluetooth manually and more details if it does not go as expected.
 
