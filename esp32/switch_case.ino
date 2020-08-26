@@ -47,33 +47,33 @@ void loop() {
     switch (message) {
     case 65: //A = ascii dec 65
       //1 Vibração Curta
-      short_vibration()
+      short_vibration();
       break;
     
     case 66: //B
       //2 Vibrações Curtas
-      short_vibration()
+      short_vibration();
       delay(300);
-      short_vibration()
+      short_vibration();
       break;
     
     case 67: //C
       //1 Vibração Longa
-      long_vibration()
+      long_vibration();
       break;
     
     case 68: //D
       //2 Vibrações Longas
-      long_vibration()
+      long_vibration();
       delay(300);
-      long_vibration()
+      long_vibration();
       break;
       
     case 69: //E
       //1 Vibração curta + 1 Vibração Longa
-      short_vibration()
+      short_vibration();
       delay(300);
-      long_vibration()
+      long_vibration();
       break;
     }
   delay(20);
