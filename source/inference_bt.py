@@ -50,11 +50,9 @@ def main(argv):
 
   # Load dataset
   yamnet_csv = load_csv('yamnet_class_map.csv')
-  #print(yamnet_csv)
   yamnet_classes = []
   for i in yamnet_csv[1:]: #ignore header
     yamnet_classes.append(i[2])
-  #print(yamnet_classes)
  
   
   for file_name in argv:
@@ -84,7 +82,7 @@ def main(argv):
           '\n'.join('  {:12s}: {:.3f}'.format(yamnet_classes[i], prediction[i])
                     for i in top5_i))
     
-    #Encoding Classificafication (Feedback)
+    #Encoding Classificafication (User Feedback)
     encoded_classes = [('Bark', 'A'),('Beep, bleep', 'B'), ('Buzzer','C'), ('Speech', 'D'), ('Baby cry, infant cry', 'E')]
     encoded_classes_dict = dict(encoded_classes)
 
