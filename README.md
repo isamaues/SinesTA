@@ -41,6 +41,12 @@ All those files can still be found on the original repository mentioned above.
 
   For compiling the a Lite version of the YAMNet model on raspberry pi.
 
+- Examples
+- Audio Samples
+- serial_Send.py
+- set_rfcomm.sh
+- SinesTA.sh
+
 ## Installation
 
 ### 1. Raspberry Pi 3 B
@@ -55,10 +61,6 @@ All those files can still be found on the original repository mentioned above.
 - 3. Run the installer by using the following command:
 
    ```sudo bash installer.sh```
-
-Check out the manual_installation_guide.md file for examples on running the application and a step by step guide to installing and running the application manually if the installation or the application examples does not run as expected.
-
-https://github.com/isamaues/SinesTA/blob/master/manual_installation_guide.md#manual-installation-guide
 
 ### 2. ESP32
 
@@ -156,8 +158,9 @@ The connection will only be open while Raspberry Pi is sending a message in byte
 - Go to the file called set_rfcomm.sh and replace the adress XX:XX:XX:XX:XX:XX for the MAC address you just found. Now the script will do it for you every time the Raspberry Pi is rebooted instead of doing it manually each time.
 
 ## Examples
+You can use those examples to test if it's everything ready or run your own audio samples for personal tests. You can try the Kettle samples, which are not classified too get some random outputs as an expected behavior.
 
-- 1. Go to the project`s directory:
+- 1. Go to the project's directory:
 
       ```cd SinesTA/source```
 
