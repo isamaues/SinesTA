@@ -124,13 +124,32 @@ Warning: You just need to do this once for each new device connected. It works w
 You can just follow those steps and the devices will be paired, but notice they are still not connected.
 
 #### Connection:
+
+## Enable SSP Profile on Raspberry Pi
+It's actually enabling sdp profile and i'm using rfcomm(native) so it might be pointless.
+
+- 1. Open Bluetooth service configuration file.
+
+```sudo nano /etc/systemd/system/dbus-org.bluez.service```
+
+- 2.Look for a line starts with “ExecStart” and add compatibility flag ‘-C’ at the end of the line.
+
+```ExecStart=/usr/lib/bluetooth/bluetoothd -C```
+
+- 3. Add a line below immediately after “ExecStart” line, then save and close the file.
+
+```ExecStartPost=/usr/bin/sdptool add SP```
+
 ##### Set RFCOMM
 The connection will only be open while Raspberry Pi is sending a message to ESP32 as a result of an iteration of the app.
 
-- You only need to do this once, which will set the rfcomm channel where the bytes will be sent to ESP32.
+- You need to , which will set the rfcomm channel where the bytes will be sent to ESP32.
 
-   ```sudo bash set_rfcomm.sh ```
+- Use your ESP 32 device's MAC adress as it follows:
 
+  ```sudo rfcomm bind rfcomm0 XX:XX:XX:XX:XX:XX```
+- To know this number 
+  
 Check out the manual_setting_bluetooth_guide.md for a step by step guide on setting the bluetooth manually and more details if it does not go as expected.
 
 https://github.com/isamaues/SinesTA/blob/master/manual_setting_bluetooth_guide.md#instructions-on-how-to-set-bluetooth-server-pairing-and-connection
