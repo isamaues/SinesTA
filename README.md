@@ -143,16 +143,21 @@ It's actually enabling sdp profile and i'm using rfcomm(native) so it might be p
 ##### Set RFCOMM
 The connection will only be open while Raspberry Pi is sending a message to ESP32 as a result of an iteration of the app.
 
-- You need to , which will set the rfcomm channel where the bytes will be sent to ESP32.
+- You need to do this everytime your Raspberry Pi is reboot, which will set the rfcomm channel where the bytes will be sent to ESP32.
 
 - Use your ESP 32 device's MAC adress as it follows:
 
   ```sudo rfcomm bind rfcomm0 XX:XX:XX:XX:XX:XX```
-- To know this number 
-  
-Check out the manual_setting_bluetooth_guide.md for a step by step guide on setting the bluetooth manually and more details if it does not go as expected.
 
-https://github.com/isamaues/SinesTA/blob/master/manual_setting_bluetooth_guide.md#instructions-on-how-to-set-bluetooth-server-pairing-and-connection
+- To find the MAC Adress of your ESP32 you can get on the bluetooth terminal and list the paired devices using the following commands:
+
+```bluetoothctl```
+
+```paired-devices```
+
+To exit the terminal:
+
+```exit```
 
 ## Examples
 
