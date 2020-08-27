@@ -141,23 +141,19 @@ It's actually enabling sdp profile and i'm using rfcomm(native) so it might be p
 ```ExecStartPost=/usr/bin/sdptool add SP```
 
 ##### Set RFCOMM
-The connection will only be open while Raspberry Pi is sending a message to ESP32 as a result of an iteration of the app.
+The connection will only be open while Raspberry Pi is sending a message in bytes to ESP32 as a result of an iteration of the app.
 
-- You need to do this everytime your Raspberry Pi is rebooted, which will set the rfcomm channel where the bytes will be sent to ESP32.
-
-- Use your ESP 32 device's MAC adress as it follows:
-
-  ```sudo rfcomm bind rfcomm0 XX:XX:XX:XX:XX:XX```
-
-- To find the MAC Adress of your ESP32 you can get on the bluetooth terminal and list the paired devices using the following commands:
+- To find the MAC Address of your ESP32 you can get on the bluetooth terminal and list the paired devices using the following commands:
 
 ```bluetoothctl```
 
 ```paired-devices```
 
-To exit the terminal:
+- To exit the terminal:
 
 ```exit```
+
+- Go to the file called set_rfcomm.sh and replace the adress XX:XX:XX:XX:XX:XX for the MAC address you just found. Now the script will do it for you every time the Raspberry Pi is rebooted instead of doing it manually each time.
 
 ## Examples
 
