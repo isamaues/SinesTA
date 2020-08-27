@@ -81,9 +81,9 @@ This is the behavior you should expect from your ESP 32 while running this appli
 'E' (Baby cry, infant cry):      1 Short Vibration and 1 Long Vibration.
 ```
 
-### 3. Adjusting the Microphone
+### 3. Adjusting the Microphone (Debug)
 
-You will need to select your microphone based on the corresponding soundcard and device number. To check all the avaiable devices, just enter the following command for arecord to list all the available devices:
+When recording, arecord may show some warnings like "busy device" or "file/directory not found" which means it did not find your microphone using the values on the script, which does work most of the time. In those cases, you will need to select your microphone based on the corresponding soundcard and device number. To check all the avaiable devices, just enter the following command for arecord to list all the available devices:
 
 ```arecord -l```
 
