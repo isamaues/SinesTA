@@ -143,7 +143,7 @@ It's actually enabling sdp profile and i'm using rfcomm(native) so it might be p
 ##### Set RFCOMM
 The connection will only be open while Raspberry Pi is sending a message to ESP32 as a result of an iteration of the app.
 
-- You need to do this everytime your Raspberry Pi is reboot, which will set the rfcomm channel where the bytes will be sent to ESP32.
+- You need to do this everytime your Raspberry Pi is rebooted, which will set the rfcomm channel where the bytes will be sent to ESP32.
 
 - Use your ESP 32 device's MAC adress as it follows:
 
