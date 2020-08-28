@@ -3,6 +3,7 @@ echo "starting installation --------------------"
 cd
 apt-get update
 pip install --upgrade pip
+sudo apt-get install python3-pip
 pip3 install --upgrade setuptools
 echo "installing prerequisite packages"
 pip3 install numpy
