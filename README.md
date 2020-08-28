@@ -4,6 +4,7 @@
   This project was created based on hearing impaired people's necessities in a domestic environment. A relatively portable embedded system capable of encoding sound classfication to vibration patterns was created as a new concept of user feedback to improve the user's experience. The raspberry Pi will be constantly listenning to the enviromment and the portable ESP32 system will be tranlating the received classification codes to vibrations which will be recognizable by the user as they move around their home during dayly and domestic activities.
 
 ## You will need:
+- Python 3.7 (other versions requires changes to the installer)
 - Raspberry Pi 3 B
 - ESP32
 - Vibration Motor (A jumper cable may also be needed)
